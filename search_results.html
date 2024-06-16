@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <title>Search Results</title>
+</head>
+<body><center>
+  <h1><img src="logo.png" id="logo">Search Results</h1>
+  <div id="results"></div>
+</center>
+  <script>
+    function getQueryParameter(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
+
+    const query = getQueryParameter('q');
+    if (query) {
+      document.getElementById('results').textContent = `You searched for: ${query}`;
+      
+    }
+  </script>
+</body>
+</html>
